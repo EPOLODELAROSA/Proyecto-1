@@ -59,8 +59,8 @@ img {
     max-width: 100%;
     height: auto;
     width: 600px;
-    display: block;
-    margin: 10 px 0 ;
+    display: flex;
+    margin: 0 auto ;
 }
   
 
