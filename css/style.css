@@ -52,6 +52,16 @@ h3 {
 p {
     text-align: justify;
 }
+
+/* Tamaño de imágenes */
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+}
   
 
 /* Pie de página */
