@@ -144,9 +144,8 @@ iframe {
     margin-top: 20px;
 }
 .author-container img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
 }
 .author-container p {
