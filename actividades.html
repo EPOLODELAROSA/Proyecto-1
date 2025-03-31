@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Actividades Interactivas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="lectura.html">Lecturas</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="autores.html">Autores</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Cuestionario -->
+    <section class="activity">
+        <h2>Cuestionario Rápido</h2>
+        <p>¿Cuál de las siguientes opciones describe mejor la Ingeniería de Sistemas?</p>
+        <button onclick="checkAnswer(this, true)">A) Un campo interdisciplinario para optimizar sistemas.</button>
+        <button onclick="checkAnswer(this, false)">B) Un área exclusiva de la informática.</button>
+        <button onclick="checkAnswer(this, false)">C) Solo se aplica en empresas tecnológicas.</button>
+        <p id="quiz-result"></p>
+    </section>
+    
+    <!-- Arrastrar y Soltar -->
+    <section class="activity">
+        <h2>Empareja los conceptos</h2>
+        <p>Arrastra los términos a su definición correcta.</p>
+        <div class="drag-container">
+            <div draggable="true" ondragstart="drag(event)" id="drag1">Enfoque Sistémico</div>
+            <div class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)" id="drop1">Definición aquí</div>
+        </div>
+        <p id="drag-result"></p>
+    </section>
+    
+    <script>
+        function checkAnswer(button, isCorrect) {
+            document.getElementById('quiz-result').innerText = isCorrect ? "¡Correcto!" : "Intenta de nuevo.";
+        }
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.innerText = document.getElementById(data).innerText;
+            document.getElementById("drag-result").innerText = "¡Bien hecho!";
+        }
+    </script>
+    
+    <footer>
+        <div> ©  2025 OVI - Introducción a la Ingeniería de Sistemas - © 2024 Efrén Polo  </div>
+    </footer>
+</body>
+</html>

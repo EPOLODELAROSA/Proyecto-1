@@ -1,11 +1,14 @@
 /* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #F5F5DC; 
     color: #2C3E50;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
+
 
 /* Encabezado */
 header {
@@ -91,4 +94,29 @@ footer {
     margin: 20px;
 }
 
+/* Actividades*/
 
+.activity {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.drag-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.drop-zone {
+    border: 2px dashed #666;
+    padding: 20px;
+    min-width: 150px;
+}
