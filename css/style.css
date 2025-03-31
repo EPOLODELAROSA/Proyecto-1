@@ -50,8 +50,8 @@ h3 {
 }
 
 h4 {
-    color: #4A7C59;
-    font-size: 70px;
+    
+    font-size: 60px;
     font-weight: bold;
     text-align: center;
 }
@@ -68,7 +68,11 @@ img {
     width: 600px;
     display: flex;
 }
-  
+image {
+    height: auto;
+    width: 600px;
+    display: center;
+} 
 
 /* Pie de página */
 footer {
