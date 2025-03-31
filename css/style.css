@@ -34,9 +34,10 @@ nav ul li a {
 
 /* Secciones */
 section {
+    max-width: 1000px;
     padding: 20px;
-    margin: 20px;
-    background: #EAE0C8; /* Tono tierra */
+    margin: 0 auto;
+    background: #EAE0C8; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -50,6 +51,7 @@ h3 {
 }
 
 h4 {
+    color: #4A7C59;
     font-size: 45px;
     font-weight: bold;
     text-align: center;
