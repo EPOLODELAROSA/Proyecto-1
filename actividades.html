@@ -20,60 +20,71 @@
         </nav>
     </header>
     
-     <!-- Cuestionario -->
+     <!-- Adivina la Palabra -->
     <section class="activity">
-        <h2>Cuestionario sobre el video</h2>
-        <p>¿Cuál es el objetivo principal de la Ingeniería de Sistemas según el video?</p>
-        <button onclick="checkAnswer(this, true)">A) Diseñar, analizar y mejorar sistemas.</button>
-        <button onclick="checkAnswer(this, false)">B) Crear solo software.</button>
-        <button onclick="checkAnswer(this, false)">C) Enfocarse únicamente en hardware.</button>
-        <p id="quiz-result"></p>
+        <h2>Adivina la Palabra</h2>
+        <p>¡Intenta adivinar la palabra relacionada con Ingeniería de Sistemas!</p>
+        <p id="hint">Pista: Es el proceso de diseñar y mantener aplicaciones o programas informáticos.</p>
+        <button onclick="revealAnswer()">Mostrar Respuesta</button>
+        <p id="answer" style="display:none;">Respuesta: Desarrollo de Software</p>
     </section>
-    
-    <!-- Arrastrar y Soltar -->
+
+    <!-- Verdadero o Falso -->
     <section class="activity">
-        <h2>Empareja los conceptos</h2>
-        <p>Arrastra los términos a su definición correcta.</p>
-        <div class="drag-container">
-            <div draggable="true" ondragstart="drag(event)" id="drag1">Enfoque Sistémico</div>
-            <div class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)" id="drop1">Definición aquí</div>
-        </div>
-        <p id="drag-result"></p>
+        <h2>Verdadero o Falso</h2>
+        <p>Indica si las siguientes afirmaciones son correctas o incorrectas:</p>
+        <button onclick="checkTrue()">A) La Ingeniería de Sistemas solo se trata de software.</button>
+        <button onclick="checkFalse()">B) La Ingeniería de Sistemas se enfoca en la optimización de procesos.</button>
+        <p id="true-false-result"></p>
     </section>
-    
-    <!-- Crucigrama -->
+
+    <!-- Memory de Términos -->
     <section class="activity">
-        <h2>Crucigrama de términos</h2>
-        <p>Llena los espacios con palabras clave de la Ingeniería de Sistemas.</p>
-        <div class="crossword">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
-            <input class="cell" maxlength="1">
+        <h2>Memory de términos</h2>
+        <p>Haz clic para emparejar los términos con sus definiciones.</p>
+        <div class="memory-game">
+            <div class="card" id="card1" onclick="flipCard(this)">Algoritmo</div>
+            <div class="card" id="card2" onclick="flipCard(this)">Un conjunto de instrucciones para resolver un problema.</div>
+            <div class="card" id="card3" onclick="flipCard(this)">Software</div>
+            <div class="card" id="card4" onclick="flipCard(this)">Conjunto de programas para realizar tareas específicas.</div>
         </div>
     </section>
-    
+
     <script>
-        function checkAnswer(button, isCorrect) {
-            document.getElementById('quiz-result').innerText = isCorrect ? "¡Correcto!" : "Intenta de nuevo.";
+        // Adivina la palabra
+        function revealAnswer() {
+            document.getElementById('answer').style.display = 'block';
         }
-        function allowDrop(event) {
-            event.preventDefault();
+
+        // Verdadero o Falso
+        function checkTrue() {
+            document.getElementById('true-false-result').innerText = "¡Correcto!";
         }
-        function drag(event) {
-            event.dataTransfer.setData("text", event.target.id);
+
+        function checkFalse() {
+            document.getElementById('true-false-result').innerText = "Incorrecto, inténtalo nuevamente.";
         }
-        function drop(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("text");
-            event.target.innerText = document.getElementById(data).innerText;
-            document.getElementById("drag-result").innerText = "¡Bien hecho!";
+
+        // Memory de Términos
+        let flippedCards = [];
+
+        function flipCard(card) {
+            card.classList.toggle('flip');
+            flippedCards.push(card);
+
+            if (flippedCards.length === 2) {
+                if (flippedCards[0].innerText === flippedCards[1].innerText) {
+                    setTimeout(() => {
+                        alert('¡Bien hecho!');
+                    }, 500);
+                } else {
+                    setTimeout(() => {
+                        flippedCards[0].classList.remove('flip');
+                        flippedCards[1].classList.remove('flip');
+                    }, 1000);
+                }
+                flippedCards = [];
+            }
         }
     </script>
     
