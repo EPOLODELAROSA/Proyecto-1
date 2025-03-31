@@ -134,21 +134,3 @@ iframe {
     background-color: #e0e0e0;
 }
 
-/* Autor */
-
-.author-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-.author-container img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-}
-.author-container p {
-    font-size: 1.2rem;
-    color: #333;
-}
