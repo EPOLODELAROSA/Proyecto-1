@@ -133,3 +133,23 @@ iframe {
 .card.flip {
     background-color: #e0e0e0;
 }
+
+/* Autor */
+
+.author-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.author-container img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.author-container p {
+    font-size: 1.2rem;
+    color: #333;
+}
