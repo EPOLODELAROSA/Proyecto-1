@@ -36,7 +36,6 @@ nav ul li a {
 section {
     padding: 0;
     margin: 0;
-    width: 50%;
     background: #EAE0C8; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -80,4 +79,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+/* Multimedia */
+
+.media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+}
+
 
