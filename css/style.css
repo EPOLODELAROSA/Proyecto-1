@@ -51,8 +51,11 @@ h3 {
 
 h4 {
     color: #4A7C59;
+    font-size: 70px;
+    font-weight: bold;
     text-align: center;
 }
+
 
 p {
     text-align: justify;
@@ -62,7 +65,7 @@ p {
 
 img {
     height: auto;
-    width: 600px auto;
+    width: 600px;
     display: flex;
 }
   
