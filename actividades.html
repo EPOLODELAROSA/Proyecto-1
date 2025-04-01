@@ -20,10 +20,74 @@
         </nav>
     </header>
    
+    <section class="activity">
+        <h2>Video Educativo</h2>
+        <p>Mira el siguiente video y responde las preguntas.</p>
+        <source src="assets/media/video2.mp4.mp4" type="video/mp4"> </video>
+        <p><a href="https://www.youtube.com/watch?v=T5rKgGK_9cY&t=63s" target="_blank">Ver en YouTube</a></p>
+    </section>
     
+   
+    <section class="activity">
+         <h2>Cuestionario sobre el video</h2>
+        <p>¿Cuál es el objetivo principal de la Ingeniería de Sistemas según el video?</p>
+        <button onclick="checkAnswer(this, true)">A) Diseñar, analizar y mejorar sistemas.</button>
+        <button onclick="checkAnswer(this, false)">B) Crear solo software.</button>
+        <button onclick="checkAnswer(this, false)">C) Enfocarse únicamente en hardware.</button>
+        <p id="quiz-result"></p>
+    </section>
+
+ 
+ <section class="activity">
+    <h2>Empareja los conceptos</h2>
+    <p>Arrastra los términos a su definición correcta.</p>
+    <div class="drag-container">
+        <div draggable="true" ondragstart="drag(event)" id="drag1">Enfoque Sistémico</div>
+        <div class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)" id="drop1">Definición aquí</div>
+    </div>
+    <p id="drag-result"></p>
+</section>
+
+<section class="activity">
+    <h2>Crucigrama de términos</h2>
+    <p>Llena los espacios con palabras clave de la Ingeniería de Sistemas.</p>
+    <div class="crossword">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+        <input class="cell" maxlength="1">
+    </div>
+</section>
+
+<script>
+    function checkAnswer(button, isCorrect) {
+        document.getElementById('quiz-result').innerText = isCorrect ? "¡Correcto!" : "Intenta de nuevo.";
+    }
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+    function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    }
+    function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        event.target.innerText = document.getElementById(data).innerText;
+        document.getElementById("drag-result").innerText = "¡Bien hecho!";
+    }
+</script>
 
 
-    
+
+
+
+
     <footer>
         <div> ©  2025 OVI - Introducción a la Ingeniería de Sistemas - © 2024 Efrén Polo  </div>
     </footer>
