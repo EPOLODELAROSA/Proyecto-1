@@ -1,11 +1,16 @@
-/* Estilos generales */
+
+/* Estilos */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F5DC; 
-    color: #2C3E50;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* 100% de la altura de la ventana */
+    background-color: #F5F5DC; /* Color de fondo */
+    color: #2C3E50;
 }
 
 .container {
