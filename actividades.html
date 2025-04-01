@@ -19,74 +19,10 @@
             </ul>
         </nav>
     </header>
+   
     
-     <!-- Adivina la Palabra -->
-    <section class="activity">
-        <h2>Adivina la Palabra</h2>
-        <p>¡Intenta adivinar la palabra relacionada con Ingeniería de Sistemas!</p>
-        <p id="hint">Pista: Es el proceso de diseñar y mantener aplicaciones o programas informáticos.</p>
-        <button onclick="revealAnswer()">Mostrar Respuesta</button>
-        <p id="answer" style="display:none;">Respuesta: Desarrollo de Software</p>
-    </section>
 
-    <!-- Verdadero o Falso -->
-    <section class="activity">
-        <h2>Verdadero o Falso</h2>
-        <p>Indica si las siguientes afirmaciones son correctas o incorrectas:</p>
-        <button onclick="checkTrue()">A) La Ingeniería de Sistemas solo se trata de software.</button>
-        <button onclick="checkFalse()">B) La Ingeniería de Sistemas se enfoca en la optimización de procesos.</button>
-        <p id="true-false-result"></p>
-    </section>
 
-    <!-- Memory de Términos -->
-    <section class="activity">
-        <h2>Memory de términos</h2>
-        <p>Haz clic para emparejar los términos con sus definiciones.</p>
-        <div class="memory-game">
-            <div class="card" id="card1" onclick="flipCard(this)">Algoritmo</div>
-            <div class="card" id="card2" onclick="flipCard(this)">Un conjunto de instrucciones para resolver un problema.</div>
-            <div class="card" id="card3" onclick="flipCard(this)">Software</div>
-            <div class="card" id="card4" onclick="flipCard(this)">Conjunto de programas para realizar tareas específicas.</div>
-        </div>
-    </section>
-
-    <script>
-        // Adivina la palabra
-        function revealAnswer() {
-            document.getElementById('answer').style.display = 'block';
-        }
-
-        // Verdadero o Falso
-        function checkTrue() {
-            document.getElementById('true-false-result').innerText = "¡Correcto!";
-        }
-
-        function checkFalse() {
-            document.getElementById('true-false-result').innerText = "Incorrecto, inténtalo nuevamente.";
-        }
-
-        // Memory de Términos
-        let flippedCards = [];
-
-        function flipCard(card) {
-            card.classList.toggle('flip');
-            flippedCards.push(card);
-
-            if (flippedCards.length === 2) {
-                if (flippedCards[0].innerText === flippedCards[1].innerText) {
-                    setTimeout(() => {
-                        alert('¡Bien hecho!');
-                    }, 500);
-                } else {
-                    setTimeout(() => {
-                        flippedCards[0].classList.remove('flip');
-                        flippedCards[1].classList.remove('flip');
-                    }, 1000);
-                }
-                flippedCards = [];
-            }
-        }
-    </script>
     
     <footer>
         <div> ©  2025 OVI - Introducción a la Ingeniería de Sistemas - © 2024 Efrén Polo  </div>
