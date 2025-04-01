@@ -1,26 +1,13 @@
-
-/* Estilos */
+/* Estilos generales */
 
 body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; 
+    color: #2C3E50;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    height: 100vh; /* 100% de la altura de la ventana */
-    background-color: #F5F5DC; /* Color de fondo */
-    color: #2C3E50;
 }
 
-.container {
-    width: 80%; /* Ajusta el tamaño de la página */
-    max-width: 1200px; /* Ancho máximo */
-    background-color: #fff; /* Color de fondo del contenedor */
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
-    border-radius: 8px; /* Bordes redondeados */
-}
 
 /* Encabezado */
 header {
@@ -84,6 +71,8 @@ img {
     display:center;
 }
 
+
+
 /* Multimedia */
 
 .media-container {
@@ -94,16 +83,6 @@ img {
     margin: 20px;
 }
 
-/* Pie de página */
-footer {
-    background-color: #4A7C59;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
 
 
 /* Actividades*/
